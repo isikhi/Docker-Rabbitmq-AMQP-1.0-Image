@@ -1,0 +1,11 @@
+FROM rabbitmq:3.6
+
+ENV RABBITMQ_DEFAULT_USER admin
+ENV RABBITMQ_DEFAULT_PASS admin
+
+COPY enabled_plugins /etc/rabbitmq/enabled_plugins
+
+EXPOSE 15672
+EXPOSE 5672
+EXPOSE 5671
+EXPOSE 1883
